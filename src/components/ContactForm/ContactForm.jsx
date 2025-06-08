@@ -10,7 +10,6 @@ export default function ContactForm() {
   const dispatch = useDispatch();
 
   function handleSubmit(values, actions) {
-    values.id = values.name + values.number;
     dispatch(addContact(values));
     actions.resetForm();
   }
